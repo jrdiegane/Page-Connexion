@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+ <head>     
+<link rel="stylesheet" href="boite.css">
+<meta charset="UTF-8">     
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title> 
+<script>
+  function validateAge() {
+    var age = document.getElementById("age").value;
+    if (age >= 18) {
+      // return true;
+      alert("Vous étes majeur.")
+    } else {
+      alert("Vous devez avoir au moins 18 ans pour soumettre ce formulaire.");
+      return false;
+    }
+  }
+</script>
+</head> 
+<body> 
+<h1>Formulaire d'inscription</h1> 
+<center> 
+<div id="container">   
+	<form onsubmit="return validateAge()">
+<div class="box" align="left"> 
+<p>Prénom:</p><br>
+<input type="text" name="prenom"><br><p>Nom:</p><br>
+<input type="text" name="nom"><br><p>Age:</p></br>
+<input type="text" name="age" id="age"><br>
+<!-- <input type="submit" value=""> -->
+<!-- <input type="button" value="Valider"><br>Submit                 -->
+<!-- <button type="submit">Submit</button> -->
+<input type="submit" value="Submit" name="Submit" style="margin-left:0em;width:4em;">
+<input type="reset" value="Effacer" name="effacer" style="margin-left:0em; margin-right: -2em;">
+</div>
+</form>
+</div>
+</center>
+</body>
+</html>  
